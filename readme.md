@@ -34,7 +34,6 @@ Set up source routing. Note that `/etc/network/interfaces` will take over config
     sudo chmod 755 /opt/if-post-up-source-route.sh
     printf "100 usb0\n101 usb1\n102 usb2\n103 usb3\n104 usb4\n" | sudo tee -a /etc/iproute2/rt_tables
     printf "110 eth0\n111 eth1\n112 eth2\n113 eth3\n114 eth4\n" | sudo tee -a /etc/iproute2/rt_tables
-    sudo systemctl disable NetworkManager
     sudo reboot
 
 Step 4

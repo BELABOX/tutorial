@@ -1,0 +1,44 @@
+# interfaces(5) file used by ifup(8) and ifdown(8)
+# Include files from /etc/network/interfaces.d:
+source-directory /etc/network/interfaces.d
+
+allow-hotplug usb0
+iface usb0 inet dhcp
+        post-up /opt/if-post-up-source-route.sh
+
+allow-hotplug usb1
+iface usb1 inet dhcp
+        post-up /opt/if-post-up-source-route.sh
+
+allow-hotplug usb2
+iface usb1 inet dhcp
+        post-up /opt/if-post-up-source-route.sh
+
+allow-hotplug usb3
+iface usb1 inet dhcp
+        post-up /opt/if-post-up-source-route.sh
+
+allow-hotplug usb4
+iface usb1 inet dhcp
+        post-up /opt/if-post-up-source-route.sh
+
+allow-hotplug eth0
+iface eth0 inet dhcp
+        post-up /opt/if-post-up-source-route.sh
+
+allow-hotplug eth1
+iface eth1 inet dhcp
+        post-up /opt/if-post-up-source-route.sh
+
+allow-hotplug eth2
+iface eth2 inet dhcp
+        post-up /opt/if-post-up-source-route.sh
+
+allow-hotplug eth3
+iface eth2 inet dhcp
+        post-up /opt/if-post-up-source-route.sh
+
+allow-hotplug eth4
+iface eth2 inet dhcp
+        post-up /opt/if-post-up-source-route.sh
+

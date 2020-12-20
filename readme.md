@@ -29,7 +29,7 @@ Step 4
 Set up source routing. Note that `/etc/network/interfaces` will take over configuring the ethX and usbX network interfaces from NetworkManager:
 
     sudo wget https://gist.github.com/rationalsa/57657d36ff13582e5b309815fa32cd63/raw/6986fcf64ea8ad57fc4b3cb4e585e96d64e4dfec/if-post-up-source-route.sh -O /opt/if-post-up-source-route.sh
-    sudo wget -O /etc/network/interfaces
+    sudo wget https://raw.githubusercontent.com/BELABOX/tutorial/main/interfaces -O /etc/network/interfaces
     sudo chmod 644 /etc/network/interfaces
     sudo chmod 755 /opt/if-post-up-source-route.sh
     printf "100 usb0\n101 usb1\n102 usb2\n103 usb3\n104 usb4\n" | sudo tee -a /etc/iproute2/rt_tables

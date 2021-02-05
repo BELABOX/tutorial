@@ -1,3 +1,5 @@
+Update: while these instructions are still current, you should consider joining [the Discord](https://discord.gg/W9bD9YUC6E) if you want to use BELABOX. We have a lot of other relevant information there and you can also get help if you're running into problems.
+
 Setting up BELABOX on a Jetson Nano
 ===================================
 

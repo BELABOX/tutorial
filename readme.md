@@ -48,6 +48,7 @@ Installing (the BELABOX fork of) SRT:
     ./configure --prefix=/usr/local
     make -j4
     sudo make install
+    sudo ldconfig
 
 Step 5
 ------

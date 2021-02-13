@@ -31,14 +31,13 @@ Installing the required dependencies:
     
 Step 4
 ------
-Set up source routing. Note that `/etc/network/interfaces` will take over configuring the ethX and usbX network interfaces from NetworkManager:
+Set up source routing for NetworkManager:
 
-    sudo wget https://gist.github.com/rationalsa/57657d36ff13582e5b309815fa32cd63/raw/6986fcf64ea8ad57fc4b3cb4e585e96d64e4dfec/if-post-up-source-route.sh -O /opt/if-post-up-source-route.sh
-    sudo wget https://raw.githubusercontent.com/BELABOX/tutorial/main/interfaces -O /etc/network/interfaces
-    sudo chmod 644 /etc/network/interfaces
-    sudo chmod 755 /opt/if-post-up-source-route.sh
+    sudo wget https://gist.githubusercontent.com/rationalsa/57657d36ff13582e5b309815fa32cd63/raw/f8af30674dcce374864cc7fbf087ec51002e6d19/if-post-up-source-route.sh -O /etc/NetworkManager/dispatcher.d/source_routing.sh
+    sudo chmod 755 /etc/NetworkManager/dispatcher.d/source_routing.sh
     printf "100 usb0\n101 usb1\n102 usb2\n103 usb3\n104 usb4\n" | sudo tee -a /etc/iproute2/rt_tables
     printf "110 eth0\n111 eth1\n112 eth2\n113 eth3\n114 eth4\n" | sudo tee -a /etc/iproute2/rt_tables
+    printf "120 wlan0\n" | sudo tee -a /etc/iproute2/rt_tables
     sudo reboot
 
 Step 4

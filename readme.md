@@ -76,13 +76,18 @@ Setting up belaUI:
     git clone https://github.com/BELABOX/belaUI.git
     cd belaUI
 
-Edit setup.json with the paths to the `belacoder` and `srtla` directories.
+Edit `setup.json` with the paths to the `belacoder` and `srtla` directories.
 
-Start the web interface with:
+You can start the web interface to test it with:
 
     ruby belaUI.rb -o 0.0.0.0 -p 8080
 
 At this point BELABOX is ready to use, assuming that you have a capture card / other v4l2 input connected. Open `http://address_of_the_jetson:8080` in a web browser. See the [belacoder readme](https://github.com/BELABOX/belacoder) for information about the available pipelines you can select in the *Encoder settings* menu of the web interface. Configure the *srtla settings* with the data for your ingest configured at *Step -1*.
+
+After setting up and confirming that everything is working correctly, you can install belaUI as a system service that starts automatically at boot by running:
+
+    sudo ./install_service.sh
+
 
 Step 8
 ------

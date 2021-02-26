@@ -11,15 +11,15 @@ iface usb1 inet dhcp
         post-up /opt/if-post-up-source-route.sh
 
 allow-hotplug usb2
-iface usb1 inet dhcp
+iface usb2 inet dhcp
         post-up /opt/if-post-up-source-route.sh
 
 allow-hotplug usb3
-iface usb1 inet dhcp
+iface usb3 inet dhcp
         post-up /opt/if-post-up-source-route.sh
 
 allow-hotplug usb4
-iface usb1 inet dhcp
+iface usb4 inet dhcp
         post-up /opt/if-post-up-source-route.sh
 
 allow-hotplug eth0
@@ -35,10 +35,10 @@ iface eth2 inet dhcp
         post-up /opt/if-post-up-source-route.sh
 
 allow-hotplug eth3
-iface eth2 inet dhcp
+iface eth3 inet dhcp
         post-up /opt/if-post-up-source-route.sh
 
 allow-hotplug eth4
-iface eth2 inet dhcp
+iface eth4 inet dhcp
         post-up /opt/if-post-up-source-route.sh
 

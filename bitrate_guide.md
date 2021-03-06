@@ -11,6 +11,7 @@ Video quality is influenced by many factors, including the camera's output quali
 | 1080p30                  | indoor / urban   | 2500-4000 Kbps      | 4000-6000 Kbps        |
 
 \*  The bitrate to typically get good image quality on a 13" monitor - *good enough* for most viewers / good choice for stability in poorer reception areas and to reduce data costs. VMAF score typically in the 75-85 range.
+
 \*\* The bitrate to typically get good image quality on a 27" monitor - comparable to other state of the art IRL live streaming setups. VMAF score of 85 and over.
 
 As a general recommendation, avoid streaming at 50 / 60 fps unless it's strictily required, as it can require up to 50% higher bitrate to match the video quality of a 25/30 fps stream, for minimal noticeable differences at 1x speed in most conditions.

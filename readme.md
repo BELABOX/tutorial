@@ -1,5 +1,8 @@
 Update: while these instructions are still current, you should consider joining [the Discord](https://discord.gg/W9bD9YUC6E) if you want to use BELABOX. We have a lot of other relevant information there and you can also get help if you're running into problems.
 
+Check out [my Twitch channel](https://www.twitch.tv/rational_sail) for sample VODs streamed using BELABOX. If you're using BELABOX, please consider [sponsoring the ongoing development](https://github.com/sponsors/rationalsa).
+
+
 Setting up BELABOX on a Jetson Nano
 ===================================
 

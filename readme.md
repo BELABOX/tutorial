@@ -95,3 +95,5 @@ Step 8
 For practical use, you should configure belaUI to be automatically started at boot and use a phone to control it. Depending on your modem setup, you could make belaUI accessible either through a modem that has both USB (for the Jetson) and WiFI (for the phone) interfaces or by setting up a Wifi access point on the Jetson Nano - outside the scope of this tutorial.
 
 If you're not confident following any of the instructions, please wait until we're able to distribute BELABOX in a more convenient format.
+
+Once you're set up, check out [the bitrate guide](https://github.com/BELABOX/tutorial/blob/main/bitrate_guide.md).

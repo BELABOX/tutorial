@@ -79,7 +79,7 @@ Building srtla:
     cd srtla
     make
 
-Step 7
+Step 8
 ------
 Setting up belaUI:
 

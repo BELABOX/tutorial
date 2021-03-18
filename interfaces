@@ -2,43 +2,40 @@
 # Include files from /etc/network/interfaces.d:
 source-directory /etc/network/interfaces.d
 
-allow-hotplug usb0
-iface usb0 inet dhcp
-        post-up /opt/if-post-up-source-route.sh
+# usb0 is normally the L4T network bridge over micro USB
+#
+# trying to get a DHCP lease on it will make the system hang
+# at boot time for a few minutes
+#
+# only enable this if you've disabled that feature with
+# systemctl disable nv-l4t-usb-device-mode.service
+#
+#auto usb0
+#iface usb0 inet dhcp
 
-allow-hotplug usb1
+auto usb1
 iface usb1 inet dhcp
-        post-up /opt/if-post-up-source-route.sh
 
-allow-hotplug usb2
+auto usb2
 iface usb2 inet dhcp
-        post-up /opt/if-post-up-source-route.sh
 
-allow-hotplug usb3
+auto usb3
 iface usb3 inet dhcp
-        post-up /opt/if-post-up-source-route.sh
 
-allow-hotplug usb4
+auto usb4
 iface usb4 inet dhcp
-        post-up /opt/if-post-up-source-route.sh
 
-allow-hotplug eth0
+auto eth0
 iface eth0 inet dhcp
-        post-up /opt/if-post-up-source-route.sh
 
-allow-hotplug eth1
+auto eth1
 iface eth1 inet dhcp
-        post-up /opt/if-post-up-source-route.sh
 
-allow-hotplug eth2
+auto eth2
 iface eth2 inet dhcp
-        post-up /opt/if-post-up-source-route.sh
 
-allow-hotplug eth3
+auto eth3
 iface eth3 inet dhcp
-        post-up /opt/if-post-up-source-route.sh
 
-allow-hotplug eth4
+auto eth4
 iface eth4 inet dhcp
-        post-up /opt/if-post-up-source-route.sh
-

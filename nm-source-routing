@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -x
+
+if [[ $2 == "up" || $2 == "dhcp4-change" ]]; then
+  ADDR=(${IP4_ADDRESS_0//// }) # splits the variable by '/'
+
+  ip rule del lookup "$1" || true
+  ip route flush table "$1"
+  #ip route add "$NETWORK" dev "$IFACE" proto kernel scope link table "$IFACE"
+  ip route add default via "$IP4_GATEWAY" dev "$1" table "$1"
+  ip rule add from "$ADDR" lookup "$1"
+fi

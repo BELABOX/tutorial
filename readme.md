@@ -31,16 +31,25 @@ Installing the required dependencies:
     
 Step 4
 ------
-Set up source routing for NetworkManager:
+Let's set up source routing for any wired modems. This uses a dhclient hook, which will execute for dhcp entries in `/etc/network/interfaces` or if called manually, but not for NetworkManager-managed devices. `/etc/network/interfaces` takes over configuring the ethX and usbX network interfaces from NetworkManager
 
-    sudo wget https://gist.githubusercontent.com/rationalsa/57657d36ff13582e5b309815fa32cd63/raw/f8af30674dcce374864cc7fbf087ec51002e6d19/if-post-up-source-route.sh -O /etc/NetworkManager/dispatcher.d/source_routing.sh
-    sudo chmod 755 /etc/NetworkManager/dispatcher.d/source_routing.sh
+    sudo wget https://raw.githubusercontent.com/BELABOX/tutorial/main/dhclient-source-routing -O /etc/dhcp/dhclient-exit-hooks.d/dhclient-source-routing
+    sudo wget https://raw.githubusercontent.com/BELABOX/tutorial/main/interfaces -O /etc/network/interfaces
     printf "100 usb0\n101 usb1\n102 usb2\n103 usb3\n104 usb4\n" | sudo tee -a /etc/iproute2/rt_tables
     printf "110 eth0\n111 eth1\n112 eth2\n113 eth3\n114 eth4\n" | sudo tee -a /etc/iproute2/rt_tables
+
+Also set up source routing for WiFi with NetworkManager:
+
+    sudo wget https://raw.githubusercontent.com/BELABOX/tutorial/main/nm-source-routing -O /etc/NetworkManager/dispatcher.d/nm-source-routing
+    sudo chmod 755 /etc/NetworkManager/dispatcher.d/nm-source-routing
     printf "120 wlan0\n" | sudo tee -a /etc/iproute2/rt_tables
     sudo reboot
 
-Step 4
+To connect to a WiFi network, use `sudo nmcli device wifi connect <AP NAME> password <WPA password>` after rebooting.
+
+We use the `/etc/network/interfaces` configuration because it seems more reliable than Networkmanager at always bringing up all the interfaces. It also brings up all the modems even when they use the same MAC address (which is the case for several Huawei models), unlike NetworkManager.
+
+Step 5
 ------
 Installing (the BELABOX fork of) SRT:
 
@@ -52,7 +61,7 @@ Installing (the BELABOX fork of) SRT:
     sudo make install
     sudo ldconfig
 
-Step 5
+Step 6
 ------
 Building belacoder:
 
@@ -61,7 +70,7 @@ Building belacoder:
     cd belacoder
     make
     
-Step 6
+Step 7
 ------
 Building srtla:
 
@@ -91,7 +100,7 @@ After setting up and confirming that everything is working correctly, you can in
     sudo ./install_service.sh
 
 
-Step 8
+Step 9
 ------
 
 For practical use, you should configure belaUI to be automatically started at boot and use a phone to control it. Depending on your modem setup, you could make belaUI accessible either through a modem that has both USB (for the Jetson) and WiFI (for the phone) interfaces or by setting up a Wifi access point on the Jetson Nano - outside the scope of this tutorial.

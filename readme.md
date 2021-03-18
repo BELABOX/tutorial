@@ -45,7 +45,7 @@ Also set up source routing for WiFi with NetworkManager:
     printf "120 wlan0\n" | sudo tee -a /etc/iproute2/rt_tables
     sudo reboot
 
-To connect to a WiFi network, use `sudo nmcli device wifi connect <AP NAME> password <WPA password>` after rebooting.
+If you have a WiFi adapter fitted, you can connect to a WiFi network with `sudo nmcli device wifi connect <AP NAME> password <WPA password>` after rebooting.
 
 We use the `/etc/network/interfaces` configuration because it seems more reliable than Networkmanager at always bringing up all the interfaces. It also brings up all the modems even when they use the same MAC address (which is the case for several Huawei models), unlike NetworkManager.
 

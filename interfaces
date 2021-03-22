@@ -10,32 +10,32 @@ source-directory /etc/network/interfaces.d
 # only enable this if you've disabled that feature with
 # systemctl disable nv-l4t-usb-device-mode.service
 #
-#auto usb0
+#allow-hotplug usb0
 #iface usb0 inet dhcp
 
-auto usb1
+allow-hotplug usb1
 iface usb1 inet dhcp
 
-auto usb2
+allow-hotplug usb2
 iface usb2 inet dhcp
 
-auto usb3
+allow-hotplug usb3
 iface usb3 inet dhcp
 
-auto usb4
+allow-hotplug usb4
 iface usb4 inet dhcp
 
-auto eth0
+allow-hotplug eth0
 iface eth0 inet dhcp
 
-auto eth1
+allow-hotplug eth1
 iface eth1 inet dhcp
 
-auto eth2
+allow-hotplug eth2
 iface eth2 inet dhcp
 
-auto eth3
+allow-hotplug eth3
 iface eth3 inet dhcp
 
-auto eth4
+allow-hotplug eth4
 iface eth4 inet dhcp

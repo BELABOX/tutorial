@@ -51,6 +51,12 @@ We use the `/etc/network/interfaces` configuration because it seems more reliabl
 
 Step 5
 ------
+Disable the virtual Ethernet interface as it will cause naming conflicts if you use modems that get enumerated as `usbX` devices.
+
+    sudo systemctl disable nv-l4t-usb-device-mode.service
+
+Step 6
+------
 Installing (the BELABOX fork of) SRT:
 
     cd
@@ -61,7 +67,7 @@ Installing (the BELABOX fork of) SRT:
     sudo make install
     sudo ldconfig
 
-Step 6
+Step 7
 ------
 Building belacoder:
 
@@ -70,7 +76,7 @@ Building belacoder:
     cd belacoder
     make
     
-Step 7
+Step 8
 ------
 Building srtla:
 
@@ -79,7 +85,7 @@ Building srtla:
     cd srtla
     make
 
-Step 8
+Step 9
 ------
 Setting up belaUI:
 
@@ -100,8 +106,8 @@ After setting up and confirming that everything is working correctly, you can in
     sudo ./install_service.sh
 
 
-Step 9
-------
+Next steps
+----------
 
 For practical use, you should configure belaUI to be automatically started at boot and use a phone to control it. Depending on your modem setup, you could make belaUI accessible either through a modem that has both USB (for the Jetson) and WiFI (for the phone) interfaces or by setting up a Wifi access point on the Jetson Nano - outside the scope of this tutorial.
 

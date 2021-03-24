@@ -2,16 +2,19 @@
 # Include files from /etc/network/interfaces.d:
 source-directory /etc/network/interfaces.d
 
-# usb0 is normally the L4T network bridge over micro USB
+# usb0 is normally the L4T virtual Ethernet over micro USB
 #
-# trying to get a DHCP lease on it will make the system hang
-# at boot time for a few minutes
-#
-# only enable this if you've disabled that feature with
+# we disable it by default in the tutorial with
 # systemctl disable nv-l4t-usb-device-mode.service
 #
-#allow-hotplug usb0
-#iface usb0 inet dhcp
+# if you have it enabled make sure that:
+# 1) you have no other usbX devices as they're not
+#    enumerated in a consistent order
+# 2) you comment out the usb0 entries below as trying to
+#    get a DHCP lease on it will stall
+#
+allow-hotplug usb0
+iface usb0 inet dhcp
 
 allow-hotplug usb1
 iface usb1 inet dhcp

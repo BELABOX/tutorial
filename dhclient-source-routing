@@ -1,7 +1,7 @@
 if [ "$reason" = "BOUND" ] || [ "$reason" = "REBOOT" ]; then
   ip rule del lookup "$interface" || true
   ip route flush table "$interface"
-  #ip route add "$new_ip_address"/"$new_subnet_mask" dev "$interface" proto kernel scope link table "$interface"
+  ip route add "$new_network_number"/"$new_subnet_mask" dev "$interface" proto kernel scope link src "$new_ip_address" table "$interface"
   ip route add default via "$new_routers" dev "$interface" table "$interface"
   ip rule add from "$new_ip_address" lookup "$interface"
 fi

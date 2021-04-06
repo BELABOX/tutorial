@@ -31,6 +31,10 @@ Installing the required dependencies:
     
 Step 4
 ------
+Add the google DNS servers so you have some resolvers accessible through any Internet-connected interfaces, as opposed to the servers accessible through a single mobile operator that you may be getting from DHCP:
+
+    printf "\nnameserver 8.8.8.8\nnameserver 8.8.4.4\n" | sudo tee -a /etc/resolvconf/resolv.conf.d/head
+
 Let's set up source routing for any wired modems. This uses a dhclient hook, which will execute for dhcp entries in `/etc/network/interfaces` or if called manually, but not for NetworkManager-managed devices. `/etc/network/interfaces` takes over configuring the ethX and usbX network interfaces from NetworkManager
 
     sudo wget https://raw.githubusercontent.com/BELABOX/tutorial/main/dhclient-source-routing -O /etc/dhcp/dhclient-exit-hooks.d/dhclient-source-routing

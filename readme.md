@@ -1,5 +1,5 @@
 Who should be using BELABOX today
----------------------------------
+=================================
 
 BELABOX is experimental software and these instructions are intended for developers and advanced users who are willing to tinker, troubleshoot, submit patches, work out how to reproduce issues and record packet captures and logs when they run into problems.
 
@@ -11,6 +11,9 @@ We're also prototyping some custom hardware which integrates everything together
 
 If you want a consumer-friendly experience sooner, [please sign up to sponsor the development](https://github.com/sponsors/rationalsa). Virtually all development so far was unpaid, done as time permitted.
 
+
+Intro
+=====
 
 You should consider joining [the Discord](https://discord.gg/hS8TcpsCKu) if you want to use BELABOX. We have a lot of other relevant information there and you can also get help if you're running into problems.
 

@@ -1,4 +1,18 @@
-Update: while these instructions are still current, you should consider joining [the Discord](https://discord.gg/hS8TcpsCKu) if you want to use BELABOX. We have a lot of other relevant information there and you can also get help if you're running into problems.
+Who should be using BELABOX today
+---------------------------------
+
+BELABOX is experimental software and these instructions are intended for developers and advanced users who are willing to tinker, troubleshoot, submit patches, work out how to reproduce issues and record packet captures and logs when they run into problems.
+
+If this doesn't sound like you, you should wait for a few more months until we can fix some of the known issues and develop some new features for a more consumer-friendly out-of-the-box experience.
+
+If someone is offering to sell a BELABOX-based streaming solution to you, don't buy it. The only reason we're not officially distributing a more consumer-friendly solution is because the software isn't quite ready for that yet. You'll also be stuck with unsupported software within a few months as there are a few tech stack changes planned for the near future.
+
+We're also prototyping some custom hardware which integrates everything together and improves the power efficiency of the now standard Jetson Nano + Cam Link setup. Only buy this hardware if you want to use it today.
+
+If you want a consumer-friendly experience sooner, [please sign up to sponsor the development](https://github.com/sponsors/rationalsa). Virtually all development so far was unpaid, done as time permitted.
+
+
+You should consider joining [the Discord](https://discord.gg/hS8TcpsCKu) if you want to use BELABOX. We have a lot of other relevant information there and you can also get help if you're running into problems.
 
 Check out [my Twitch channel](https://www.twitch.tv/rational_sail) for sample VODs streamed using BELABOX. If you're using BELABOX, please consider [sponsoring the ongoing development](https://github.com/sponsors/rationalsa).
 

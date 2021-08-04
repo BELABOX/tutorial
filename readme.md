@@ -5,7 +5,7 @@ BELABOX is experimental software and these instructions are intended for develop
 
 If this doesn't sound like you, you should wait for a few more months until we can fix some of the known issues and develop some new features for a more consumer-friendly out-of-the-box experience.
 
-If someone is offering to sell a BELABOX-based streaming solution to you, don't buy it. The only reason we're not officially distributing a more consumer-friendly solution is because the software isn't quite ready for that yet. You'll also be stuck with unsupported software within a few months as there are a few tech stack changes planned for the near future.
+**If someone is offering to sell a BELABOX-based streaming solution to you, don't buy it. The only reason we're not officially distributing a more consumer-friendly solution is because the software isn't quite ready for that yet. You'll also be stuck with unsupported software within a few months as there are a few tech stack changes planned for the near future.**
 
 We're also prototyping some custom hardware which integrates everything together and improves the power efficiency of the now standard Jetson Nano + Cam Link setup. Only buy this hardware if you want to use it today.
 

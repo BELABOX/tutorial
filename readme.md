@@ -63,7 +63,7 @@ Also set up source routing for WiFi with NetworkManager:
 
     sudo wget https://raw.githubusercontent.com/BELABOX/tutorial/main/nm-source-routing -O /etc/NetworkManager/dispatcher.d/nm-source-routing
     sudo chmod 755 /etc/NetworkManager/dispatcher.d/nm-source-routing
-    printf "120 wlan0\n" | sudo tee -a /etc/iproute2/rt_tables
+    printf "120 wlan0\n121 wlan1\n122 wlan2\n123 wlan3\n124 wlan4\n" | sudo tee -a /etc/iproute2/rt_tables
 
 If you have a WiFi adapter fitted, you can connect to a WiFi network with `sudo nmcli device wifi connect <AP NAME> password <WPA password>` after rebooting.
 

@@ -135,3 +135,13 @@ For practical use, you should configure belaUI to be automatically started at bo
 If you're not confident following any of the instructions, please wait until we're able to distribute BELABOX in a more convenient format.
 
 Once you're set up, check out [the bitrate guide](https://github.com/BELABOX/tutorial/blob/main/bitrate_guide.md).
+
+
+Receiving the stream
+--------------------
+
+Regardless of how many connections are available, BELABOX always streams via [srtla](https://github.com/BELABOX/srtla). To receive this stream, you have several options, including:
+
+1) Become a [github sponsor](https://github.com/sponsors/rationalsa), support the BELABOX project and receive access to our hosted srtla/SRT relay service with servers in the US and France.
+2) Follow the [srtla readme](https://github.com/BELABOX/srtla) to set up a basic relay using srt-live-transmit or another SRT server configured with the equivalent options.
+3) Use a **third party** docker image configured to receive srtla, such as [this one](https://hub.docker.com/r/sherazarde/belabox-receiver). Note that we can make no guarantees about third party packages being maintained to support future revisions of the srtla software.

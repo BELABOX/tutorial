@@ -44,7 +44,7 @@ Step 3
 ------
 Installing the required dependencies:
 
-    sudo apt-get install nano build-essential git tcl libssl-dev ruby nodejs npm usb-modeswitch libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev
+    sudo apt-get install nano build-essential git tcl libssl1.0-dev ruby nodejs npm usb-modeswitch libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev
     
 Step 4
 ------

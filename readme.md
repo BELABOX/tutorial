@@ -17,7 +17,7 @@ Intro
 
 You should consider joining [the Discord](https://discord.gg/hS8TcpsCKu) if you want to use BELABOX. We have a lot of other relevant information there and you can also get help if you're running into problems.
 
-Check out [my Twitch channel](https://www.twitch.tv/rational_sail) for sample VODs streamed using BELABOX. If you're using BELABOX, please consider [sponsoring the ongoing development](https://github.com/sponsors/rationalsa).
+Check out [my Twitch channel](https://www.twitch.tv/rationalirl) for sample VODs streamed using BELABOX. If you're using BELABOX, please consider [sponsoring the ongoing development](https://github.com/sponsors/rationalsa).
 
 
 Setting up BELABOX on a Jetson Nano
@@ -63,7 +63,7 @@ Also set up source routing for WiFi with NetworkManager:
 
     sudo wget https://raw.githubusercontent.com/BELABOX/tutorial/main/nm-source-routing -O /etc/NetworkManager/dispatcher.d/nm-source-routing
     sudo chmod 755 /etc/NetworkManager/dispatcher.d/nm-source-routing
-    printf "120 wlan0\n" | sudo tee -a /etc/iproute2/rt_tables
+    printf "120 wlan0\n121 wlan1\n122 wlan2\n123 wlan3\n124 wlan4\n" | sudo tee -a /etc/iproute2/rt_tables
 
 If you have a WiFi adapter fitted, you can connect to a WiFi network with `sudo nmcli device wifi connect <AP NAME> password <WPA password>` after rebooting.
 
@@ -135,8 +135,18 @@ After setting up and confirming that everything is working correctly, you can in
 Next steps
 ----------
 
-For practical use, you should configure belaUI to be automatically started at boot and use a phone to control it. Depending on your modem setup, you could make belaUI accessible either through a modem that has both USB (for the Jetson) and WiFI (for the phone) interfaces or by setting up a Wifi access point on the Jetson Nano - outside the scope of this tutorial.
+For practical use, you should configure belaUI to be automatically started at boot and use a phone to control it. Depending on your modem setup, you could make belaUI accessible either through a modem that has both USB (for the Jetson) and WiFI (for the phone) interfaces, or by enabling the hotspot feature on the phone and connecting the Jetson to it as per step 4, or by setting up a Wifi access point on the Jetson Nano - outside the scope of this tutorial.
 
 If you're not confident following any of the instructions, please wait until we're able to distribute BELABOX in a more convenient format.
 
 Once you're set up, check out [the bitrate guide](https://github.com/BELABOX/tutorial/blob/main/bitrate_guide.md).
+
+
+Receiving the stream
+--------------------
+
+Regardless of how many connections are available, BELABOX always streams via [srtla](https://github.com/BELABOX/srtla). To receive this stream, you have several options, including:
+
+1) Become a [github sponsor](https://github.com/sponsors/rationalsa), support the BELABOX project and receive access to our hosted srtla/SRT relay service with servers in the US and France.
+2) Follow the [srtla readme](https://github.com/BELABOX/srtla) to set up a basic relay using srt-live-transmit or another SRT server configured with the equivalent options.
+3) Use a **third party** docker image configured to receive srtla, such as [this one](https://hub.docker.com/r/sherazarde/belabox-receiver). Note that we can make no guarantees about third party packages being maintained to support future revisions of the srtla software.

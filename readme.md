@@ -121,6 +121,8 @@ Install the Node.js dependencies:
 
 Edit `setup.json` with the paths to the `belacoder` and `srtla` directories.
 
+Edit the default `changeme` password in `config.json`.
+
 You can start the web interface to test it with:
 
     sudo nodejs belaUI.js

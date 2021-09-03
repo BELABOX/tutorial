@@ -44,7 +44,7 @@ Step 3
 ------
 Installing the required dependencies:
 
-    sudo apt-get install nano build-essential git tcl libssl-dev ruby ruby-sinatra ruby-sinatra-contrib usb-modeswitch libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev
+    sudo apt-get install nano build-essential git tcl libssl-dev ruby nodejs npm usb-modeswitch libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev
     
 Step 4
 ------
@@ -113,12 +113,17 @@ Setting up belaUI:
     cd
     git clone https://github.com/BELABOX/belaUI.git
     cd belaUI
+    git checkout ws_nodejs
+
+Install the Node.js dependencies:
+
+    npm install
 
 Edit `setup.json` with the paths to the `belacoder` and `srtla` directories.
 
 You can start the web interface to test it with:
 
-    sudo ruby belaUI.rb -o 0.0.0.0 -p 80
+    sudo nodejs belaUI.js
 
 At this point BELABOX is ready to use, assuming that you have a capture card / other v4l2 input connected. Open `http://address_of_the_jetson` in a web browser. See the [belacoder readme](https://github.com/BELABOX/belacoder) for information about the available pipelines you can select in the *Encoder settings* menu of the web interface. Configure the *srtla settings* with the data for your ingest configured at *Step -1*.
 

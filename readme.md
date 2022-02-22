@@ -1,15 +1,9 @@
-Who should be using BELABOX today
-=================================
+This tutorial is now DEPRECATED
+===============================
 
-BELABOX is experimental software and these instructions are intended for developers and advanced users who are willing to tinker, troubleshoot, submit patches, work out how to reproduce issues and record packet captures and logs when they run into problems.
+# DEPRECATED and unmaintained, don't use this tutorial
 
-If this doesn't sound like you, you should wait for a few more months until we can fix some of the known issues and develop some new features for a more consumer-friendly out-of-the-box experience.
-
-**If someone is offering to sell a BELABOX-based streaming solution to you, don't buy it. The only reason we're not officially distributing a more consumer-friendly solution is because the software isn't quite ready for that yet. You'll also be stuck with unsupported software within a few months as there are a few tech stack changes planned for the near future.**
-
-We're also prototyping some custom hardware which integrates everything together and improves the power efficiency of the now standard Jetson Nano + Cam Link setup. Only buy this hardware if you want to use it today.
-
-If you want a consumer-friendly experience sooner, [please sign up to sponsor the development](https://github.com/sponsors/rationalsa). Virtually all development so far was unpaid, done as time permitted.
+# Go to [belabox.net](https://belabox.net/) for the current installation instructions
 
 
 Intro
@@ -158,3 +152,11 @@ Ending notes
 If you're not confident following any of the instructions, please wait until we're able to distribute BELABOX in a more convenient format.
 
 Once you're set up, check out [the bitrate guide](https://github.com/BELABOX/tutorial/blob/main/bitrate_guide.md).
+
+
+This tutorial is now DEPRECATED
+===============================
+
+# DEPRECATED and unmaintained, don't use this tutorial
+
+# Go to [belabox.net](https://belabox.net/) for the current installation instructions
